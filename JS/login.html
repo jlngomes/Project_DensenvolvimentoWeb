@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinWise - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css">
+    <style>
+        /* ESTILOS PARA MENSAGEM DE ERRO */
+        .error-message {
+            color: #e74c3c;
+            background-color: #fdecea;
+            padding: 12px 20px;
+            border-radius: 4px;
+            border-left: 4px solid #e74c3c;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .error-message::before {
+            content: "⚠";
+            font-size: 18px;
+        }
+
+        .error-field {
+            border-color: #e74c3c !important;
+            background-color: #fff6f6 !important;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="login-body">
+    <div class="background-blur"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Fin<span>Wise</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="recurso.html">Recursos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <span class="dark-mode-icon">🌙</span>
+                    <span class="light-mode-icon">☀️</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <div class="form-container">
+            <div class="form-tabs">
+                <button class="tab-btn active" data-target="login-form">Login</button>
+                <button class="tab-btn" data-target="cadastro-form">Cadastro</button>
+            </div>
+
+            <!-- Mensagem de erro -->
+            <div id="login-error-message" class="error-message" style="display: none;">
+                Usuário ou senha incorretos. Por favor, tente novamente.
+            </div>
+
+            <!-- Formulário de Login -->
+            <form id="login-form" class="form active">
+                <h2>Bem-vindo de volta</h2>
+                
+                <div class="form-group">
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="login-email" required class="login-field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="login-password" required class="login-field">
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Lembrar-me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary login-btn">Entrar</button>
+            </form>
+
+            <!-- Formulário de Cadastro -->
+            <form id="cadastro-form" class="form">
+                <h2>Crie sua conta</h2>
+                
+                <div class="form-group">
+                    <label for="cadastro-nome">Nome completo</label>
+                    <input type="text" id="cadastro-nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cadastro-email">E-mail</label>
+                    <input type="email" id="cadastro-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cadastro-phone">Telefone</label>
+                    <input type="tel" id="cadastro-phone" placeholder="(00) 00000-0000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cadastro-password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="cadastro-password" required>
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cadastro-confirm-password">Confirmar senha</label>
+                    <div class="password-input">
+                        <input type="password" id="cadastro-confirm-password" required>
+                        <button type="button" class="toggle-password">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Aceito os <a href="#">termos e condições</a></label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary login-btn">Criar Conta</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> FinWise. Todos os direitos reservados.</p>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>

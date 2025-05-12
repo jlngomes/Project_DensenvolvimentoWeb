@@ -1,0 +1,398 @@
+
+/* Estilos específicos para a página Sobre */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-hero {
+    background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+.about-intro {
+    padding: 5rem 0;
+    background-color: var(--background-color);
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+}
+
+.about-image {
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--teste-color);
+}
+
+.about-features {
+    padding: 5rem 0;
+    background-color: var(--card-background);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.feature-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.feature-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.about-differentials {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.05) 0%, rgba(var(--secondary-color-rgb), 0.05) 100%);
+}
+
+:root {
+    --primary-color-rgb: 0, 102, 153;
+    --secondary-color-rgb: 102, 204, 153;
+}
+
+[data-theme="dark"] {
+    --primary-color-rgb: 30, 51, 30;
+    --teste-color: white;
+    --secondary-color-rgb: 42, 110, 77;
+}
+
+.differentials-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.differential-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    padding: 2.5rem;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.differential-card:hover {
+    transform: translateY(-5px);
+}
+
+.differential-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.differential-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.differential-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.about-steps {
+    padding: 5rem 0;
+    background-color: var(--background-color);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+}
+
+.step-connector {
+    width: 2px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    margin-left: 29px;
+    margin-bottom: 2rem;
+}
+
+.about-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding-top: 4rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer-slogan {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-slogan h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-slogan p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-col {
+    min-width: 150px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    opacity: 0.6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .about-hero h2 {
+        font-size: 1.4rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .differentials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .differential-card {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+    }
+    
+    .step {
+        width: 100%;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Ajustes para o dark mode na página Sobre */
+[data-theme="dark"] .about-features {
+    background-color: #121212;
+}
+
+[data-theme="dark"] .feature-item {
+    background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .footer {
+    background-color: #1e331e;
+}
+
+/* Ativa o link atual no menu de navegação */
+.nav-links a.active {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
