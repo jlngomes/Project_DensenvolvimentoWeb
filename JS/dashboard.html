@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinWise - Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dashboard-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard-style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -26,43 +25,71 @@
         <main class="dashboard-main">
             <!-- Seção Resumo Financeiro -->
             <section class="financial-summary">
-                <div class="card salary-card">
-                    <h3><i class="fas fa-wallet"></i> Salário</h3>
-                    <div class="salary-input">
-                        <input type="number" id="salary-input" placeholder="R$ 0,00">
-                        <button id="update-salary" class="btn-primary">Atualizar</button>
-                    </div>
-                    <div class="salary-display">
-                        <span>Salário atual:</span>
-                        <span id="current-salary">R$ 0,00</span>
-                    </div>
-                </div>
-
-                <div class="card expenses-card">
-                    <h3><i class="fas fa-chart-pie"></i> Despesas</h3>
-                    <div class="expenses-form">
-                        <input type="text" id="expense-description" placeholder="Descrição">
-                        <input type="number" id="expense-amount" placeholder="Valor">
-                        <select id="expense-category">
-                            <option value="alimentacao">Alimentação</option>
-                            <option value="moradia">Moradia</option>
-                            <option value="transporte">Transporte</option>
-                            <option value="lazer">Lazer</option>
-                            <option value="outros">Outros</option>
-                        </select>
-                        <button id="add-expense" class="btn-primary">Adicionar</button>
+                <div class="card salary-card card-hover">
+                    <h3><i class="fas fa-wallet icon-accent"></i> Salário</h3>
+                    <div class="card-content">
+                        <div class="form-group">
+                            <label for="salary-input">Atualizar Salário</label>
+                            <div class="input-with-button">
+                                <input type="number" id="salary-input" placeholder="R$ 0,00" min="0" step="0.01">
+                                <button id="update-salary" class="btn-primary">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="salary-display">
+                            <span>Salário atual:</span>
+                            <strong id="current-salary">R$ 0,00</strong>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card balance-card">
-                    <h3><i class="fas fa-balance-scale"></i> Saldo Mensal</h3>
-                    <div class="balance-display">
-                        <span id="monthly-balance">R$ 0,00</span>
-                        <span id="balance-status">(Neutro)</span>
+                <div class="card expenses-card card-hover">
+                    <h3><i class="fas fa-chart-pie icon-accent"></i> Despesas</h3>
+                    <div class="card-content">
+                        <div class="form-group">
+                            <label for="expense-description">Descrição</label>
+                            <input type="text" id="expense-description" placeholder="Ex: Supermercado">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expense-amount">Valor</label>
+                                <input type="number" id="expense-amount" placeholder="R$ 0,00" min="0" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="expense-category">Categoria</label>
+                                <select id="expense-category">
+                                    <option value="alimentacao">Alimentação</option>
+                                    <option value="moradia">Moradia</option>
+                                    <option value="transporte">Transporte</option>
+                                    <option value="lazer">Lazer</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="add-expense" class="btn-primary full-width">
+                            <i class="fas fa-plus"></i> Adicionar Despesa
+                        </button>
                     </div>
-                    <div class="balance-details">
-                        <div>Receitas: <span id="total-income">R$ 0,00</span></div>
-                        <div>Despesas: <span id="total-expenses">R$ 0,00</span></div>
+                </div>
+
+                <div class="card balance-card card-hover">
+                    <h3><i class="fas fa-balance-scale icon-accent"></i> Saldo Mensal</h3>
+                    <div class="card-content">
+                        <div class="balance-display">
+                            <span id="monthly-balance">R$ 0,00</span>
+                            <span id="balance-status">(Neutro)</span>
+                        </div>
+                        <div class="balance-details">
+                            <div class="detail-item">
+                                <span>Receitas:</span>
+                                <span id="total-income" class="positive">R$ 0,00</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Despesas:</span>
+                                <span id="total-expenses" class="negative">R$ 0,00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -70,13 +97,29 @@
             <!-- Seção Gráficos -->
             <section class="charts-section">
                 <div class="card chart-card">
-                    <h3><i class="fas fa-chart-line"></i> Evolução Financeira</h3>
-                    <canvas id="financial-evolution-chart"></canvas>
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-line"></i> Evolução Financeira</h3>
+                        <select class="chart-period">
+                            <option>Últimos 6 meses</option>
+                            <option>Últimos 12 meses</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="financial-evolution-chart"></canvas>
+                    </div>
                 </div>
 
                 <div class="card chart-card">
-                    <h3><i class="fas fa-chart-bar"></i> Distribuição de Gastos</h3>
-                    <canvas id="expenses-distribution-chart"></canvas>
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-bar"></i> Distribuição de Gastos</h3>
+                        <select class="chart-period">
+                            <option>Este mês</option>
+                            <option>Últimos 3 meses</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="expenses-distribution-chart"></canvas>
+                    </div>
                 </div>
             </section>
 
@@ -84,53 +127,57 @@
             <section class="investments-section">
                 <div class="card investment-simulator">
                     <h3><i class="fas fa-calculator"></i> Simulador de Investimentos</h3>
-                    <div class="simulator-form">
-                        <div class="form-group">
-                            <label>Valor Inicial (R$)</label>
-                            <input type="number" id="initial-amount" value="1000">
+                    <div class="card-content">
+                        <div class="simulator-form">
+                            <div class="form-group">
+                                <label for="initial-amount">Valor Inicial (R$)</label>
+                                <input type="number" id="initial-amount" value="1000" min="0" step="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="investment-months">Meses</label>
+                                <input type="number" id="investment-months" value="12" min="1" max="360">
+                            </div>
+                            <div class="form-group">
+                                <label for="investment-type">Tipo de Investimento</label>
+                                <select id="investment-type">
+                                    <option value="selic">SELIC (10,15% a.a.)</option>
+                                    <option value="cdb">CDB (12% a.a.)</option>
+                                    <option value="lci">LCI (8,5% a.a.)</option>
+                                    <option value="tesouro">Tesouro Direto (IPCA+5,5%)</option>
+                                </select>
+                            </div>
+                            <button id="simulate-btn" class="btn-primary full-width">Simular</button>
                         </div>
-                        <div class="form-group">
-                            <label>Meses</label>
-                            <input type="number" id="investment-months" value="12">
-                        </div>
-                        <div class="form-group">
-                            <label>Tipo de Investimento</label>
-                            <select id="investment-type">
-                                <option value="selic">SELIC (10,15% a.a.)</option>
-                                <option value="cdb">CDB (12% a.a.)</option>
-                                <option value="lci">LCI (8,5% a.a.)</option>
-                                <option value="tesouro">Tesouro Direto (IPCA+5,5%)</option>
-                            </select>
-                        </div>
-                        <button id="simulate-btn" class="btn-primary">Simular</button>
-                    </div>
-                    <div class="simulation-result">
-                        <h4>Resultado da Simulação</h4>
-                        <div class="result-item">
-                            <span>Valor Final:</span>
-                            <span id="final-amount">R$ 0,00</span>
-                        </div>
-                        <div class="result-item">
-                            <span>Rendimento:</span>
-                            <span id="earnings-amount">R$ 0,00</span>
+                        <div class="simulation-result">
+                            <h4>Resultado da Simulação</h4>
+                            <div class="result-item">
+                                <span>Valor Final:</span>
+                                <strong id="final-amount">R$ 0,00</strong>
+                            </div>
+                            <div class="result-item">
+                                <span>Rendimento:</span>
+                                <strong id="earnings-amount" class="positive">R$ 0,00</strong>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="card investment-tips">
                     <h3><i class="fas fa-lightbulb"></i> Dicas de Investimento</h3>
-                    <div class="tips-container">
-                        <div class="tip-item">
-                            <h4>Reserva de Emergência</h4>
-                            <p>Mantenha 6 meses de despesas em investimentos de liquidez imediata como Tesouro Selic ou CDB com liquidez diária.</p>
-                        </div>
-                        <div class="tip-item">
-                            <h4>Diversificação</h4>
-                            <p>Distribua seus investimentos entre renda fixa, variável e imóveis para reduzir riscos.</p>
-                        </div>
-                        <div class="tip-item">
-                            <h4>Longo Prazo</h4>
-                            <p>Para objetivos a mais de 5 anos, considere fundos de investimento ou ações de boas empresas.</p>
+                    <div class="card-content">
+                        <div class="tips-container">
+                            <div class="tip-item">
+                                <h4>Reserva de Emergência</h4>
+                                <p>Mantenha 6 meses de despesas em investimentos de liquidez imediata como Tesouro Selic ou CDB com liquidez diária.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h4>Diversificação</h4>
+                                <p>Distribua seus investimentos entre renda fixa, variável e imóveis para reduzir riscos.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h4>Longo Prazo</h4>
+                                <p>Para objetivos a mais de 5 anos, considere fundos de investimento ou ações de boas empresas.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,35 +186,37 @@
             <!-- Seção Extrato -->
             <section class="statement-section">
                 <div class="card statement-card">
-                    <div class="statement-header">
-                        <h3><i class="fas fa-file-alt"></i> Extrato Bancário</h3>
-                        <div class="statement-actions">
-                            <select id="statement-period">
-                                <option value="30">Últimos 30 dias</option>
-                                <option value="60">Últimos 60 dias</option>
-                                <option value="90">Últimos 90 dias</option>
-                                <option value="custom">Personalizado</option>
-                            </select>
-                            <button id="download-statement" class="btn-secondary">
-                                <i class="fas fa-download"></i> PDF
-                            </button>
+                    <div class="card-content">
+                        <div class="statement-header">
+                            <h3><i class="fas fa-file-alt"></i> Extrato Bancário</h3>
+                            <div class="statement-actions">
+                                <select id="statement-period">
+                                    <option value="30">Últimos 30 dias</option>
+                                    <option value="60">Últimos 60 dias</option>
+                                    <option value="90">Últimos 90 dias</option>
+                                    <option value="custom">Personalizado</option>
+                                </select>
+                                <button id="download-statement" class="btn-secondary">
+                                    <i class="fas fa-download"></i> PDF
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="statement-table-container">
-                        <table class="statement-table">
-                            <thead>
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Descrição</th>
-                                    <th>Categoria</th>
-                                    <th>Valor</th>
-                                    <th>Saldo</th>
-                                </tr>
-                            </thead>
-                            <tbody id="statement-body">
-                                <!-- Dados serão preenchidos via JavaScript -->
-                            </tbody>
-                        </table>
+                        <div class="statement-table-container">
+                            <table class="statement-table">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Descrição</th>
+                                        <th>Categoria</th>
+                                        <th>Valor</th>
+                                        <th>Saldo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="statement-body">
+                                    <!-- Dados serão preenchidos via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>

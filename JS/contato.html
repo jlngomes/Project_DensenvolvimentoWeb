@@ -6,45 +6,55 @@
     <title>Contato - FinWise</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contato.css">
-    <!-- Ícones de redes sociais -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Fin<span>Wise</span></div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="recurso.html">Recursos</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="contato.html" class="active">Contato</a>
-                <button id="darkModeToggle" class="dark-mode-toggle">
-                    <span class="dark-mode-icon">🌙</span>
-                    <span class="light-mode-icon">☀️</span>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                Fin<span>Wise</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="animate__animated animate__fadeIn">Home</a>
+                <a href="recurso.html" class="animate__animated animate__fadeIn">Recursos</a>
+                <a href="sobre.html" class="animate__animated animate__fadeIn">Sobre</a>
+                <a href="contato.html" class="animate__animated animate__fadeIn active">Contato</a>
+                <button id="darkModeToggle" class="dark-mode-toggle animate__animated animate__fadeIn">
+                    <i class="fas fa-moon dark-mode-icon"></i>
+                    <i class="fas fa-sun light-mode-icon"></i>
                 </button>
             </div>
         </nav>
     </header>
     
     <section class="hero contact-hero">
-        <div class="hero-content">
+        <div class="hero-content animate__animated animate__fadeInUp">
             <h1>Nossa Equipe</h1>
-            <div class="typing-container">
+            <div class="typing-container animate__animated animate__fadeIn">
                 <h2 class="typing-subtitle"></h2>
             </div>
+            <p class="hero-description animate__animated animate__fadeIn">
+                Conheça os profissionais comprometidos em transformar a educação financeira no Brasil. Uma equipe multidisciplinar unida por uma missão: simplificar o conhecimento financeiro.
+            </p>
         </div>
     </section>
     
     <section class="team-section">
-        <h3 class="section-title">Equipe FinWise</h3>
+        <h3 class="section-title animate__animated animate__fadeIn">Equipe FinWise</h3>
         
         <div class="team-grid">
             <!-- Membro 1 -->
-            <div class="team-card">
+            <div class="team-card" style="--i:1">
                 <div class="photo-container">
                     <div class="photo-circle">
-                        <!-- Placeholder para foto, substituir pelo caminho da imagem real -->
-                        <img src="ImagensContato/Matheus.jpg" alt="Membro 1" onerror="this.src='img/placeholder-profile.jpg'">
+                        <img src="ImagensContato/Matheus.jpg" alt="Matheus Souza" onerror="this.src='/api/placeholder/150/150'">
                     </div>
                 </div>
                 <h4 class="member-name">Matheus Souza</h4>
@@ -59,10 +69,10 @@
             </div>
             
             <!-- Membro 2 -->
-            <div class="team-card">
+            <div class="team-card" style="--i:2">
                 <div class="photo-container">
                     <div class="photo-circle">
-                        <img src="ImagensContato/andré.jpg" alt="Membro 2" onerror="this.src='img/placeholder-profile.jpg'">
+                        <img src="ImagensContato/andré.jpg" alt="André Siqueira" onerror="this.src='/api/placeholder/150/150'">
                     </div>
                 </div>
                 <h4 class="member-name">André Siqueira</h4>
@@ -72,15 +82,15 @@
                     <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:ricardo@finwise.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:andre@finwise.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             
             <!-- Membro 3 -->
-            <div class="team-card">
+            <div class="team-card" style="--i:3">
                 <div class="photo-container">
                     <div class="photo-circle">
-                        <img src="ImagensContato/Isa.jpg" alt="Membro 3" onerror="this.src='img/placeholder-profile.jpg'">
+                        <img src="ImagensContato/Isa.jpg" alt="Izabelly da Silva" onerror="this.src='/api/placeholder/150/150'">
                     </div>
                 </div>
                 <h4 class="member-name">Izabelly da Silva</h4>
@@ -95,10 +105,10 @@
             </div>
             
             <!-- Membro 4 -->
-            <div class="team-card">
+            <div class="team-card" style="--i:4">
                 <div class="photo-container">
                     <div class="photo-circle">
-                        <img src="ImagensContato/Jean.jpg" alt="Membro 4" onerror="this.src='img/placeholder-profile.jpg'">
+                        <img src="ImagensContato/Jean.jpg" alt="Jean Luca" onerror="this.src='/api/placeholder/150/150'">
                     </div>
                 </div>
                 <h4 class="member-name">Jean Luca</h4>
@@ -113,31 +123,31 @@
             </div>
             
             <!-- Membro 5 -->
-            <div class="team-card">
+            <div class="team-card" style="--i:5">
                 <div class="photo-container">
                     <div class="photo-circle">
-                        <img src="ImagensContato/Leticia.jpg"Membro 5" onerror="this.src='img/placeholder-profile.jpg'">
+                        <img src="ImagensContato/Leticia.jpg" alt="Letícia Correa" onerror="this.src='/api/placeholder/150/150'">
                     </div>
                 </div>
                 <h4 class="member-name">Letícia Correa</h4>
-                <p class="member-role">Co-Maneger</p>
-                <p class="member-desc"></p>
+                <p class="member-role">Co-Manager</p>
+                <p class="member-desc">Responsável pelas estratégias de crescimento e parcerias institucionais. Experiência em gestão de projetos financeiros e educacionais.</p>
                 <div class="social-links">
                     <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:marina@finwise.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:leticia@finwise.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
     </section>
     
     <section class="contact-form-section">
-        <h3 class="section-title">Entre em contato</h3>
+        <h3 class="section-title animate__animated animate__fadeIn">Entre em contato</h3>
         <div class="contact-container">
-            <div class="contact-info">
+            <div class="contact-info animate__animated animate__fadeInLeft">
                 <div class="info-item">
-                    <div class="info-icon">📍</div>
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="info-content">
                         <h4>Endereço</h4>
                         <p>Av. Paulista, 1000, São Paulo - SP</p>
@@ -145,7 +155,7 @@
                 </div>
                 
                 <div class="info-item">
-                    <div class="info-icon">📱</div>
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                     <div class="info-content">
                         <h4>Telefone</h4>
                         <p>+55 (11) 3456-7890</p>
@@ -153,7 +163,7 @@
                 </div>
                 
                 <div class="info-item">
-                    <div class="info-icon">✉️</div>
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
                     <div class="info-content">
                         <h4>Email</h4>
                         <p>contato@finwise.com.br</p>
@@ -172,7 +182,7 @@
                 </div>
             </div>
             
-            <form class="contact-form">
+            <form class="contact-form animate__animated animate__fadeInRight">
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" id="name" name="name" required>
@@ -199,49 +209,62 @@
     </section>
     
     <footer class="footer">
-        <div class="container">
-            <div class="footer-slogan">
-                <h3>Fin<span>Wise</span></h3>
-                <p>Educação financeira inteligente para transformar sua relação com o dinheiro.</p>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    Fin<span>Wise</span>
+                    <p>Transformando sua relação com o dinheiro</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="recurso.html">Recursos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#">Calculadoras</a></li>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Ferramentas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de Uso</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Inscreva-se em nossa newsletter</h4>
+                    <p>Receba dicas financeiras e novidades exclusivas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="recurso.html">Recursos</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#">Calculadoras</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Ferramentas</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> FinWise. Todos os direitos reservados.</p>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2025</span> FinWise. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -6,142 +6,154 @@
     <title>Sobre | FinWise - Educação Financeira Inteligente</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sobre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Fin<span>Wise</span></div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="recurso.html">Recursos</a>
-                <a href="sobre.html" class="active">Sobre</a>
-                <a href="contato.html">Contato</a>
-                <button id="darkModeToggle" class="dark-mode-toggle">
-                    <span class="dark-mode-icon">🌙</span>
-                    <span class="light-mode-icon">☀️</span>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                Fin<span>Wise</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="animate__animated animate__fadeIn">Home</a>
+                <a href="recurso.html" class="animate__animated animate__fadeIn">Recursos</a>
+                <a href="sobre.html" class="animate__animated animate__fadeIn active">Sobre</a>
+                <a href="contato.html" class="animate__animated animate__fadeIn">Contato</a>
+                <button id="darkModeToggle" class="dark-mode-toggle animate__animated animate__fadeIn">
+                    <i class="fas fa-moon dark-mode-icon"></i>
+                    <i class="fas fa-sun light-mode-icon"></i>
                 </button>
             </div>
         </nav>
     </header>
     
     <section class="about-hero">
-        <div class="about-hero-content">
-            <h1>Bem-vindo ao <span class="highlight">FinWise</span></h1>
-            <div class="typing-container">
+        <div class="about-hero-content animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__fadeInUp">Bem-vindo ao <span class="highlight">FinWise</span></h1>
+            <div class="typing-container animate__animated animate__fadeIn">
                 <h2 class="typing-subtitle"></h2>
-            </div>
-    </section>
-    
-    <section class="about-intro">
-        <div class="container">
-            <p class="intro-text">Gerenciar seu dinheiro nunca foi tão fácil. Com nossa plataforma, você pode controlar seus gastos, definir metas e acompanhar sua evolução financeira de maneira intuitiva e interativa.</p>
-            
-            <div class="about-image">
-                <img src="ImagemDash/Dashboard.jpg" alt="Dashboard FinWise" />
             </div>
         </div>
     </section>
     
+    <section class="about-intro">
+        <div class="container">
+            <p class="intro-text animate__animated animate__fadeIn">Gerenciar seu dinheiro nunca foi tão fácil. Com nossa plataforma, você pode controlar seus gastos, definir metas e acompanhar sua evolução financeira de maneira intuitiva e interativa.</p>
+            <div class="about-image animate__animated animate__fadeInUp">
+                
+                
+            </div>
+        </div>
+    </section>
+
     <section class="about-features">
         <div class="container">
-            <h2 class="section-heading">O que oferecemos?</h2>
-            
+            <h2 class="section-title">O que oferecemos?</h2>
             <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">📊</div>
+                <div class="feature-item" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
                     <h3>Dashboard Financeira</h3>
                     <p>Visualize suas receitas, despesas e investimentos em um só lugar.</p>
                 </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
                     <h3>Metas e Desafios</h3>
                     <p>Estabeleça objetivos financeiros e participe de desafios como o das 52 semanas e a metodologia 70-30.</p>
                 </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">🔥</div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
                     <h3>Day Streak</h3>
                     <p>Mantenha um histórico de engajamento e disciplina financeira.</p>
                 </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">📈</div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Relatórios Analíticos</h3>
                     <p>Gráficos detalhados para otimizar sua gestão financeira.</p>
                 </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">📋</div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
                     <h3>Organização de Gastos</h3>
                     <p>Categorize suas despesas e identifique oportunidades de economia.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="about-differentials">
         <div class="container">
-            <h2 class="section-heading">Diferenciais do FinWise</h2>
-            
+            <h2 class="section-title">Diferenciais do FinWise</h2>
             <div class="differentials-container">
-                <div class="differential-card">
-                    <div class="differential-icon">🚀</div>
+                <div class="differential-card" data-aos="fade-up">
+                    <div class="differential-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
                     <h3>Gamificação</h3>
                     <p>Transforme sua jornada financeira em uma experiência interativa e motivadora.</p>
                 </div>
-                
-                <div class="differential-card">
-                    <div class="differential-icon">🔒</div>
+                <div class="differential-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="differential-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
                     <h3>Segurança</h3>
                     <p>Seus dados protegidos com tecnologia confiável.</p>
                 </div>
-                
-                <div class="differential-card">
-                    <div class="differential-icon">📊</div>
+                <div class="differential-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="differential-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
                     <h3>Simplicidade e Eficiência</h3>
                     <p>Tudo o que você precisa, em uma interface intuitiva.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="about-steps">
         <div class="container">
-            <h2 class="section-heading">Como Começar?</h2>
-            
+            <h2 class="section-title">Como Começar?</h2>
             <div class="steps-container">
-                <div class="step">
+                <div class="step" data-aos="fade-right">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Crie sua conta</h3>
                         <p>Personalize sua experiência</p>
                     </div>
                 </div>
-                
                 <div class="step-connector"></div>
-                
-                <div class="step">
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Adicione suas receitas e despesas</h3>
                         <p>Visualize seu fluxo financeiro</p>
                     </div>
                 </div>
-                
                 <div class="step-connector"></div>
-                
-                <div class="step">
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Defina suas metas</h3>
                         <p>Participe de desafios</p>
                     </div>
                 </div>
-                
                 <div class="step-connector"></div>
-                
-                <div class="step">
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Acompanhe seu progresso</h3>
@@ -151,60 +163,131 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Seção: Histórias de Superação -->
+<section class="success-stories">
+    <h3 class="section-title">Histórias de Superação</h3>
+    <div class="stories-container">
+  
+      <div class="story-card" data-aos="fade-up">
+        <div class="story-image">
+          <img src="https://organismobrasil.com.br/wp-content/uploads/2023/05/Luiz-Barsi-o-rei-dos-dividendos-e-suas-licoes-de-investimento-1536x935.png" alt="Foto de Luiz Barsi">
+        </div>
+        <div class="story-content">
+          <h4 class="story-name">Luiz Barsi</h4>
+          <p class="story-title">De origem humilde a maior investidor individual da B3</p>
+          <p class="story-desc">
+            Filho de imigrantes, Luiz Barsi começou a trabalhar ainda criança como engraxate. Autodidata, estudou sozinho e começou a investir na bolsa com pequenas quantias nos anos 1970. Hoje, é considerado o maior investidor individual da Bolsa brasileira, com patrimônio bilionário.
+          </p>
+          <p class="story-quote">"O investimento é um processo lento, é uma arte que exige paciência, disciplina e um plano. Comece pequeno, mas comece."</p>
+          <a href="#" class="read-more">Ler história completa</a>
+        </div>
+      </div>
+  
+      <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="story-image">
+          <img src="https://www.gatesfoundation.org/-/media/gfo/3about/3people/ga_warren_buffett_20210203_0001.jpg" alt="Foto de Warren Buffett">
+        </div>
+        <div class="story-content">
+          <h4 class="story-name">Warren Buffett</h4>
+          <p class="story-title">De pequenos investimentos a um dos homens mais ricos do mundo</p>
+          <p class="story-desc">
+            Warren Buffett começou a investir aos 11 anos com apenas algumas ações. Ele construiu seu império financeiro através da compra de empresas subvalorizadas e com forte potencial de crescimento. Sua filosofia de investimento a longo prazo tem sido uma lição valiosa para milhões de pessoas.
+          </p>
+          <p class="story-quote">"A melhor inversão que você pode fazer é em si mesmo. O que você aprende, ninguém pode tirar de você."</p>
+          <a href="#" class="read-more">Ler história completa</a>
+        </div>
+      </div>
+  
+      <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="story-image">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.N77m1cFDusNsbtUl0zObywHaEc?cb=iwc1&rs=1&pid=ImgDetMain" alt="Foto de Nath Finanças">
+        </div>
+        <div class="story-content">
+          <h4 class="story-name">Nath Finanças</h4>
+          <p class="story-title">Da periferia para educadora financeira de milhões</p>
+          <p class="story-desc">
+            Nascida na periferia do Rio de Janeiro, Nathalia Rodrigues se formou em Administração enquanto trabalhava como operadora de caixa. Começou a compartilhar dicas de educação financeira nas redes sociais de forma simples e acessível, e hoje é uma das principais influenciadoras de finanças do Brasil.
+          </p>
+          <p class="story-quote">"Educação financeira não é sobre ficar rico, é sobre ter liberdade para escolher o que fazer com seu dinheiro e sua vida."</p>
+          <a href="#" class="read-more">Ler história completa</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
     <section class="about-cta">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content animate__animated animate__fadeIn">
                 <h2>Transforme sua relação com o dinheiro!</h2>
                 <p>Comece agora mesmo e conquiste um futuro financeiro mais seguro e equilibrado.</p>
                 <div class="cta-buttons">
                     <a href="#" class="btn btn-primary">Começar Agora</a>
+                    <a href="#" class="btn btn-secondary">Saiba Mais</a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-slogan">
-                <h3>FinWise</h3>
-                <p>Controle sua vida financeira de forma simples e eficiente!</p>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    Fin<span>Wise</span>
+                   <p>Transformando sua relação com o dinheiro</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="recurso.html">Recursos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Metas</a></li>
+                            <li><a href="#">Relatórios</a></li>
+                            <li><a href="#">Categorias</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de Uso</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Inscreva-se em nossa newsletter</h4>
+                    <p>Receba dicas financeiras e novidades exclusivas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Navegação</h4>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="#">Recursos</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Metas</a></li>
-                        <li><a href="#">Relatórios</a></li>
-                        <li><a href="#">Categorias</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><a href="#">Suporte</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                    </ul>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> FinWise. Todos os direitos reservados.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 FinWise. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

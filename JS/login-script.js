@@ -154,6 +154,9 @@ function showAlert(message, isSuccess, duration = 3000) {
     alert.className = `alert ${isSuccess ? 'success' : 'error'}`;
     alert.textContent = message;
     document.body.prepend(alert);
+
+    // Adiciona z-index maior que o header (1000)
+    alert.style.zIndex = '1001';
     
     setTimeout(() => {
         alert.style.opacity = '0';
@@ -296,6 +299,29 @@ async function checkSession() {
     }
 }
 
+/**
+ * Configura o toggle do tema escuro
+ */
+function setupDarkModeToggle() {
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    
+    // Verifica preferência do usuário ou tema salvo
+    const savedTheme = localStorage.getItem('theme') || 
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    // Aplica o tema inicial
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    darkModeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Alterna o tema
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
+
 // INICIALIZAÇÃO DO SISTEMA
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -308,6 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setupRegisterForm();
             setupPasswordToggles();
             setupPhoneMask();
+            setupDarkModeToggle(); // Adiciona o toggle do tema escuro
         }
     });
 });
